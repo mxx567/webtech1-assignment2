@@ -41,3 +41,60 @@
     text-justify: center;
 }
 
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    min-height: 390px;
+    padding: 25px;
+    background-color: white;
+    border: rgb(169, 169, 169) solid 2px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.card button {
+    margin-top: auto;
+    padding: 12px;
+    background-color: white;
+    border: rgb(169, 169, 169) solid 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.card button:hover {
+    background-color: rgb(169, 169, 169);
+    color: white;
+}
+
+
