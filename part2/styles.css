@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    height: 100px;
+    background-color: rgb(246, 244, 244);
+    
+}
+
+.header a{
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    color: black;
+    border: rgb(169, 169, 169) solid 2px;
+}
+
+.header a:hover{
+    background-color: rgb(169, 169, 169);
+    color: white;
+}
+
+
+.container{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+    
+    grid-template-columns: 25% 75%;
+}
+
+
+
+.logo {
+    width: 256px;
+    margin-left: 20px;
+    text-align: center; 
+    text-justify: center;
+}
+
+.sidebar {
+    grid-area: menu;
+    background-color: rgb(240, 239, 239);
+    padding-top: 20px;
+    text-align: center; 
+}
+
+.sidebarlist li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    padding: 30px;
+    gap: 20px;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.galimg{
+    position: relative;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.galimg div{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: #0000003a;
+
+    transform: translateY(100%);
+    transition: 0.3s ease;
+}
+
+.galimg:hover div{
+    transform: translateY(0%);
+}
+
+.galimg:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content h1, 
+.content p {
+    margin-left: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: footer;
+    height: 200px;
+    padding-top: 15px;
+    background-color: rgb(227, 227, 227);
+}
+
+.navbar {
+    background-color: #495c6f;
+    text-align: center;
+    padding-top: 15px;
+    height: 40px;
+}
+
+.navbar a {
+    display: inline-block; 
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #4a6683;
+    color: #3498db;
+}
